@@ -29,7 +29,7 @@ import plotly.graph_objs as go
 with warnings.catch_warnings():
     warnings.filterwarnings("ignore", category=FutureWarning)
     import h5py
-import ipdb
+# import ipdb  # removed: unused debug import
 
 
 backend = mpl.get_backend()
@@ -694,7 +694,7 @@ class LLEsolver(object):
             for key, it in self._sim.items():
                 if not key == "domega_disp":
                     if type(it) is str:
-                        it = np.string_(it)
+                        it = np.bytes_(it)
                     if type(it) is list:
                         try:
                             if None in it:
@@ -718,7 +718,7 @@ class LLEsolver(object):
             for key, it in self._res.items():
                 if not key == "domega_disp":
                     if type(it) is str:
-                        it = np.string_(it)
+                        it = np.bytes_(it)
                     if type(it) is list:
                         if None in it:
                             it = [0 if iitt is None else iitt for iitt in it]

@@ -6,7 +6,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import plotly.graph_objs as go
-import ipdb
+# import ipdb  # removed: unused debug import
 # backend = mpl.get_backend()
 # print(backend)
 
